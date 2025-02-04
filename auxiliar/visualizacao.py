@@ -1,7 +1,14 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-sns.set(style="whitegrid")
+
+# def grafico_drawdonw(data_daily):
+#         plt.figure(figsize=(10, 6))
+#         plt.plot(data_daily, label='Drawdown', color='red')
+#         plt.title(f'Drawdown (Máxima: {data_daily.min()}%)')
+#         plt.xlabel('Tempo')
+#         plt.ylabel('Drawdown (%)')
+#         plt.legend()sns.set(style="whitegrid")
 # def grafico_valor_tempo(data_daily):
         
 #         plt.figure(figsize=(10,6))
@@ -18,14 +25,7 @@ sns.set(style="whitegrid")
 #         plt.ylabel('Tempo')
 #         plt.xlabel('Rendimento')
 #         plt.legend()
-#         plt.show()
-# def grafico_drawdonw(data_daily):
-#         plt.figure(figsize=(10, 6))
-#         plt.plot(data_daily, label='Drawdown', color='red')
-#         plt.title(f'Drawdown (Máxima: {data_daily.min()}%)')
-#         plt.xlabel('Tempo')
-#         plt.ylabel('Drawdown (%)')
-#         plt.legend()
+#     
 #         plt.show()
 def graficos(close,redimento,volatilidade,drawown,SMA10,SMA50):
         # grafico_valor_tempo(close)
