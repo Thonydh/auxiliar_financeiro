@@ -18,7 +18,7 @@ def drawdonw_maximo(data_daily):
     df['Pico'] = df['Close'].cummax()
     df['Drawdown'] = (df['Close']-df['Pico'])/df['Pico']*100
     drawdonw_maximo = df['Drawdown'].min()
-    return drawdonw_maximo
+    return f'{drawdonw_maximo:.2f}'
 
     
 def media_movel(data_daily):

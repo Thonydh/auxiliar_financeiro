@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
+
 
 
 def graficos(close,redimento,volatilidade,drawdown,SMA10,SMA50):
+        
         """faz a expocição do grafico: preço ao longo do tempo, volatilidade, drawdown"""
+        solusao_temporaria = drawdown.min()
         plt.figure(figsize=(10,6))
         plt.subplot(2, 2, 1)
         plt.plot(close, label = 'Preço')
@@ -21,8 +22,8 @@ def graficos(close,redimento,volatilidade,drawdown,SMA10,SMA50):
         plt.legend()
 
         plt.subplot(2, 2, 3)
-        plt.plot(drawown, label='Drawdown', color='red')
-        plt.title(f'Drawdown (Máxima: {drawdown.min()}%)')
+        plt.plot(drawdown, label='Drawdown', color='red')
+        plt.title(f'Drawdown (Máxima: {solusao_temporaria:.2f}%)')
         plt.xlabel('Tempo')
         plt.ylabel('Drawdown (%)')
         plt.legend()
