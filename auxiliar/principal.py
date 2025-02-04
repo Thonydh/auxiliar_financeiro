@@ -7,8 +7,8 @@ from visualizacao import graficos
 Api_Key = '9IZKALK83MT3S0T5'
 
 def main():
-    #ticker = input('digite o ticker da ação (exemplo: IBM):').upper
-    ticker = 'NVDA'
+    ticker = input('digite o ticker da ação (exemplo: IBM):').upper()
+    
     
     try:
         preco = []
@@ -20,7 +20,7 @@ def main():
         rendimentos = redimento(data_daily)
 
         print(f'rendimento diario:{rendimentos}')
-        media= media_movel(data_daily)
+        media_movel(data_daily)
         volatilidade = calcular_volatilidade(rendimentos)
         print(f'Volatilidade: {volatilidade}')
         drawdonw = drawdonw_maximo(data_daily)
